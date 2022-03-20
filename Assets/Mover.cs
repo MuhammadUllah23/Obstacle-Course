@@ -5,15 +5,12 @@ using UnityEngine;
 public class Mover : MonoBehaviour
 {
     // these variables change out movement speed
-    [SerializeField] float xValue = 0f;
     [SerializeField] float yValue = 0f;
     [SerializeField] float zValue = 0f;
-
 
     // Start is called before the first frame update
     void Start()
     {
-        
         
     }
 
