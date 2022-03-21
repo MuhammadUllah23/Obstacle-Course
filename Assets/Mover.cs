@@ -5,11 +5,11 @@ using UnityEngine;
 // void Start() {} = return nothing
 public class Mover : MonoBehaviour
 {
-    [SerializeField] float moveSpeed = 65f;
+    [SerializeField] float moveSpeed = 10f;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -33,4 +33,7 @@ public class Mover : MonoBehaviour
         // When we multiply something by Time.deltaTime it makes our game "frame rate independent"
         transform.Translate(xValue, 0, zValue);
     }
+  
+    //    transform.position = new Vector3(0f, 2.234f, -25.433f);
+   
 }
