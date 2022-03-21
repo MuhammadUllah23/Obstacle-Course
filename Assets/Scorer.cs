@@ -9,5 +9,6 @@ public class Scorer : MonoBehaviour
     {
         hits++;
        Debug.Log("Bumped this many times" + hits); 
+       transform.position = new Vector3(0f, 2.234f, -25.433f);
     }
 }
