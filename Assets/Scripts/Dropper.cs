@@ -5,6 +5,8 @@ using UnityEngine;
 public class Dropper : MonoBehaviour
 {
     // Start is called before the first frame update
+
+    float timeToWait = 3f;
     void Start()
     {
         
@@ -13,6 +15,9 @@ public class Dropper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Time.time);
+        if(Time.time > timeToWait)
+        {
+            Debug.Log("3 seconds has elapse");
+        }
     }
 }
