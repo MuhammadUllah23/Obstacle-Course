@@ -6,7 +6,7 @@ public class Dropper : MonoBehaviour
 {
     MeshRenderer renderer;
     Rigidbody rigidBody;
-    float timeToWait = 3f;
+    float timeToWait = 10f;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class Dropper : MonoBehaviour
     {
         if(Time.time > timeToWait)
         {
-            Debug.Log("3 seconds has elapse");
+            
         }
     }
 }
