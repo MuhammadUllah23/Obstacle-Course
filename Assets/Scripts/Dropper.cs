@@ -22,7 +22,8 @@ public class Dropper : MonoBehaviour
     {
         if(Time.time > timeToWait)
         {
-            
+            renderer.enabled = true;
+            rigidBody.useGravity = true;
         }
     }
 }
