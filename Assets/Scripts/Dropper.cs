@@ -9,7 +9,7 @@ public class Dropper : MonoBehaviour
     float timeToWait = 3f;
     void Start()
     {
-        
+        GetComponent<MeshRenderer>().enabled = false;
     }
 
     // Update is called once per frame
