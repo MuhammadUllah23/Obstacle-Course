@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Dropper : MonoBehaviour
 {
-    // Start is called before the first frame update
+    MeshRenderer renderer;
 
+    // Start is called before the first frame update
     float timeToWait = 3f;
     void Start()
     {
-        GetComponent<MeshRenderer>().enabled = false;
+        renderer = GetComponent<MeshRenderer>();
+        renderer.enabled = false;
     }
 
     // Update is called once per frame
