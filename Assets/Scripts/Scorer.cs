@@ -5,10 +5,17 @@ using UnityEngine;
 public class Scorer : MonoBehaviour
 {
     int hits = 0;
+
+    float xStart = 0f;
+    float yStart = 2.234f;
+    float zStart = -26.124f;
     private void OnCollisionEnter(Collision other) 
     {
+        if(other.gameObject.tag == "Ground") {
+            
+        }
         hits++;
        Debug.Log("Bumped this many times" + hits); 
-       transform.position = new Vector3(0f, 2.234f, -25.433f);
+       transform.position = new Vector3(xStart, yStart, zStart);
     }
 }
