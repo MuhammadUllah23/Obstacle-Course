@@ -5,6 +5,9 @@ using UnityEngine;
 public class Spinner : MonoBehaviour
 {
     // Start is called before the first frame update
+    [SerializeField] float xAxis = 0f;
+    [SerializeField] float yAxis = 0f;
+    [SerializeField] float zAxis = 0f;
     void Start()
     {
         
@@ -13,6 +16,6 @@ public class Spinner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Rotate(xAxis, yAxis, zAxis);
     }
 }
