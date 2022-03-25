@@ -9,8 +9,7 @@ public class Scorer : MonoBehaviour
     float xStart = 0f;
     float yStart = 1.1f;
     float zStart = -26.124f;
-    private void OnCollisionEnter(Collision other) 
-    {
+    private void OnCollisionEnter(Collision other) {
         if(other.gameObject.tag == "Enemy") {
             hits++;
             Debug.Log("Bumped this many times" + hits); 

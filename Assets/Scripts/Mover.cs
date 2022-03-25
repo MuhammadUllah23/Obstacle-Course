@@ -8,26 +8,22 @@ public class Mover : MonoBehaviour
     float moveSpeed = 10f;
     
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         PrintInstructions();
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         MovePlayer();
     }
 
-    void PrintInstructions() 
-    {
+    void PrintInstructions() {
         Debug.Log("Welcome to the game");
         Debug.Log("Use arrow keys to move around");
         Debug.Log("Avoid obstacles or get sent back to the start");
     }
 
-    void MovePlayer()
-    {
+    void MovePlayer() {
         float xValue = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
         float zValue = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
         // Using Time.deltaTime Unity can tell us how long each framework took to execute.

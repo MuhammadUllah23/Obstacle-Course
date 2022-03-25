@@ -6,11 +6,10 @@ public class Dropper : MonoBehaviour
 {
     MeshRenderer renderer;
     Rigidbody rigidBody;
-    float timeToWait = 10f;
+    float timeToWait = 60f;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         renderer = GetComponent<MeshRenderer>();
         rigidBody = GetComponent<Rigidbody>();
         renderer.enabled = false;
@@ -18,8 +17,7 @@ public class Dropper : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         if(Time.time > timeToWait)
         {
             renderer.enabled = true;

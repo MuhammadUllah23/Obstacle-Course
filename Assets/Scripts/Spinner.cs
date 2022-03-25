@@ -14,8 +14,7 @@ public class Spinner : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         transform.Rotate(xAxis, yAxis, zAxis);
     }
 }
