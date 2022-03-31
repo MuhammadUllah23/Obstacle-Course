@@ -2471,6 +2471,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roller
       objectReference: {fileID: 0}
+    - target: {fileID: 144065119005870781, guid: ccf7bd56df9753f4390486cff5613423, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccf7bd56df9753f4390486cff5613423, type: 3}
 --- !u!1001 &2684461065344275257

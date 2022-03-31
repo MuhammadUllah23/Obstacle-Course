@@ -12,7 +12,7 @@ public class Scorer : MonoBehaviour
     private void OnCollisionEnter(Collision other) {
         if(other.gameObject.tag == "Enemy") {
             hits++;
-            Debug.Log("Bumped this many times" + hits); 
+            Debug.Log("Bumped this many times " + hits); 
             transform.position = new Vector3(xStart, yStart, zStart); 
         }
         
