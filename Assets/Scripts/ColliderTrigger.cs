@@ -9,11 +9,12 @@ public class ColliderTrigger : MonoBehaviour
     void Start()
     {
         objectName = gameObject.name;
+        GameObject.Find("Dropper").GetComponent<Rigidbody>().useGravity = false;
     }
 
     void OnTriggerEnter (Collider other) {
         if(other.tag == "Player") {
-            
+            GameObject.Find("Dropper").GetComponent<Rigidbody>().useGravity = true;
         }
     }
     
