@@ -19,6 +19,6 @@ public class PingPong : MonoBehaviour
     void Update () {
        
        
-        transform.position =new Vector3(Mathf.PingPong(Time.time*6,max-min)+min, transform.position.y, transform.position.z);
+        transform.position =new Vector3(Mathf.PingPong(Time.time*5,max-min)+min, transform.position.y, transform.position.z);
     }
 }
