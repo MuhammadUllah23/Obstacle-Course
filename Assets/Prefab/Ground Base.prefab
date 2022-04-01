@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 7119533525262239441}
   - component: {fileID: 1829620871539832529}
   - component: {fileID: 2798895283919076715}
+  - component: {fileID: 6433650615729351920}
   m_Layer: 0
   m_Name: Ground Plane (1)
   m_TagString: Untagged
@@ -129,6 +130,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &6433650615729351920
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3335890763403325724}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Center: {x: 0, y: 0, z: 0.0000019073486}
 --- !u!1 &4624444546344425018
 GameObject:
   m_ObjectHideFlags: 0
@@ -141,6 +155,7 @@ GameObject:
   - component: {fileID: 1541382327825545311}
   - component: {fileID: 8478592622729142207}
   - component: {fileID: 1507924121536443389}
+  - component: {fileID: 2658887003370241681}
   m_Layer: 0
   m_Name: Ground Plane (2)
   m_TagString: Untagged
@@ -225,6 +240,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &2658887003370241681
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4624444546344425018}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Center: {x: 0, y: 0, z: -0.0000019073486}
 --- !u!1 &8405190781804980786
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,6 +265,7 @@ GameObject:
   - component: {fileID: 3093622198005359018}
   - component: {fileID: 4663479534185940072}
   - component: {fileID: 4629918262753013170}
+  - component: {fileID: 790710728533469118}
   m_Layer: 0
   m_Name: Ground Plane
   m_TagString: Ground
@@ -321,3 +350,16 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &790710728533469118
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8405190781804980786}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.000001, y: 2.220446e-16, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
