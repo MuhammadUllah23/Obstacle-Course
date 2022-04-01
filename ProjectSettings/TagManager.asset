@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Enemy
+  - ColDropper
   layers:
   - Default
   - TransparentFX
