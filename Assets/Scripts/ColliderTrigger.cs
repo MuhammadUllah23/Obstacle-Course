@@ -9,12 +9,12 @@ public class ColliderTrigger : MonoBehaviour
     void Start()
     {
         objectName = gameObject.name;
-        Debug.Log(objectName);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void OnTriggerEnter (Collider other) {
+        if(other.tag == "Player") {
+            
+        }
     }
+    
 }
