@@ -6,7 +6,7 @@ public class ColliderTrigger : MonoBehaviour
 {
      string objectName; 
      string[] nameSplit;
-     char objectNum;
+     int objectNum;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +18,7 @@ public class ColliderTrigger : MonoBehaviour
 
     void OnTriggerEnter (Collider other) {
         if(other.tag == "Player") {
+            if(objectNum)
             GameObject.Find("Dropper").GetComponent<Rigidbody>().useGravity = true;
         }
     }
@@ -27,7 +28,9 @@ public class ColliderTrigger : MonoBehaviour
         Debug.Log(nameSplit.Length + " word");
         Debug.Log(nameSplit[0][0]);
         if(nameSplit.Length == 3) {
-            objectNum = nameSplit[2][1];
+            
+            objectNum = int.Parse(nameSplit[2][1].ToString());
+    
         }
     }
 }
