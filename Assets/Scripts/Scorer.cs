@@ -34,8 +34,11 @@ public class Scorer : MonoBehaviour
             positions[2] = enemy.transform.position.z;
             // gameObjects z position is stored in the third index.
             positions[3] = enemy.transform.rotation.x;
+            // gameObjects x rotation is stored in the fourth index.
             positions[4] = enemy.transform.rotation.y;
+            // gameObjects y rotation is stored in the fifth index.
             positions[5] = enemy.transform.rotation.z;
+            // gameObjects z rotation is stored in the sixth index.
 
             originalPositions[i] = positions;
             // the positions array is stored in the jagged-array at index of i
@@ -59,6 +62,7 @@ public class Scorer : MonoBehaviour
                 float x = originalPositions[i][0];
                 float y = originalPositions[i][1];
                 float z = originalPositions[i][2];
+                
                 i++;
                 enemy.transform.position = new Vector3(x, y, z);
 
