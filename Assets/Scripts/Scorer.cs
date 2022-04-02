@@ -44,11 +44,13 @@ public class Scorer : MonoBehaviour
         xFinish = GameObject.Find("Winner Platform").transform.position.x;
         yFinish = GameObject.Find("Winner Platform").transform.position.y + 10;
         zFinish = GameObject.Find("Winner Platform").transform.position.z;
-
+        stopDropper();
+        
         if(other.gameObject.tag == "Enemy") {
             hits++;
             Debug.Log("Bumped this many times: " + hits); 
             transform.position = new Vector3(xStart, yStart, zStart);
+            
             
             int i = 0;
             foreach (GameObject enemy in enemies){
@@ -60,9 +62,9 @@ public class Scorer : MonoBehaviour
                 enemy.transform.position = new Vector3(x, y, z);
                 // enemy.transform.Rotate(0, 0, 0);
 
-                if(enemy.name.StartsWith("Dropper")){
-                    enemy.GetComponent<Rigidbody>().useGravity = false;
-                }
+                // if(enemy.name.StartsWith("Dropper")){
+                //     enemy.GetComponent<Rigidbody>().useGravity = false;
+                // }
             }
             
         } else if(other.gameObject.tag == "Winner") {
@@ -71,7 +73,11 @@ public class Scorer : MonoBehaviour
         }  
     }
 
-    void resetDropper() {
-
+    void stopDropper() {
+        foreach (GameObject enemy in enemies){
+            if(enemy.name.StartsWith("Dropper")){
+                enemy.GetComponent<Rigidbody>().useGravity = false;
+            }
+        }
     }
 }
