@@ -14,10 +14,11 @@ public class Scorer : MonoBehaviour
     float yFinish;
     float zFinish;
     GameObject[] enemies;
-    float[][] originalPositions = new float[][];
+    float[][] originalPositions;
 
     void Start() {
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        originalPositions = new float[enemies.Length][];
         int i = 0;
         foreach (GameObject enemy in enemies){
             float[] positions = new float[3];
@@ -27,7 +28,8 @@ public class Scorer : MonoBehaviour
             positions[2] = enemy.transform.position.z;
 
             originalPositions[i] = positions;
-            
+            Debug.Log(originalPositions);
+            i++;
         }
     }
     private void OnCollisionEnter(Collision other) {
