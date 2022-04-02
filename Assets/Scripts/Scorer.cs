@@ -25,7 +25,7 @@ public class Scorer : MonoBehaviour
         int i = 0;
         // index tracker
         foreach (GameObject enemy in enemies){
-            float[] positions = new float[3];
+            float[] positions = new float[6];
             // array that takes 3 values to store a single gameObjects original position
             positions[0] = enemy.transform.position.x;
             // gameObjects x position is stored in the first index.
@@ -33,6 +33,9 @@ public class Scorer : MonoBehaviour
             // gameObjects y position is stored in the second index.
             positions[2] = enemy.transform.position.z;
             // gameObjects z position is stored in the third index.
+            positions[3] = enemy.transform.rotation.x;
+            positions[4] = enemy.transform.rotation.y;
+            positions[5] = enemy.transform.rotation.z;
 
             originalPositions[i] = positions;
             // the positions array is stored in the jagged-array at index of i
