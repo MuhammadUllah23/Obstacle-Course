@@ -36,8 +36,8 @@ public class ColliderTrigger : MonoBehaviour
     
     void getNumber() {
         nameSplit = objectName.Split(' ');
-        Debug.Log(nameSplit.Length + " word");
-        Debug.Log(nameSplit[0][0]);
+        // Debug.Log(nameSplit.Length + " word");
+        // Debug.Log(nameSplit[0][0]);
         if(nameSplit.Length == 3) {
             
             objectNum = int.Parse(nameSplit[2][1].ToString());

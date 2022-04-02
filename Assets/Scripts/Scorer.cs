@@ -28,7 +28,6 @@ public class Scorer : MonoBehaviour
             positions[2] = enemy.transform.position.z;
 
             originalPositions[i] = positions;
-            Debug.Log(originalPositions);
             i++;
         }
     }
@@ -37,15 +36,17 @@ public class Scorer : MonoBehaviour
         yFinish = GameObject.Find("Winner Platform").transform.position.y + 10;
         zFinish = GameObject.Find("Winner Platform").transform.position.z;
 
-        
-        
-
         if(other.gameObject.tag == "Enemy") {
             hits++;
             Debug.Log("Bumped this many times: " + hits); 
-            transform.position = new Vector3(xStart, yStart, zStart); 
+            transform.position = new Vector3(xStart, yStart, zStart);
+            int i = 0;
             foreach (GameObject enemy in enemies){
-
+                float x = originalPositions[i][0];
+                float y = originalPositions[i][1];
+                float z = originalPositions[i][2];
+                i++;
+                enemy.transform.position = new Vector3(x, y, z);
             }
             
         } else if(other.gameObject.tag == "Winner") {
