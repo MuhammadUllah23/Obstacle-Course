@@ -13,22 +13,31 @@ public class Scorer : MonoBehaviour
     float xFinish;
     float yFinish;
     float zFinish;
-    GameObject[] enemies;
+    GameObject[] enemies; 
     float[][] originalPositions;
+    // jagged-array or array of arrays
 
     void Start() {
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        // array of all gameobjects with tag of enemy
         originalPositions = new float[enemies.Length][];
+        // initializing jagged-array
         int i = 0;
+        // index tracker
         foreach (GameObject enemy in enemies){
             float[] positions = new float[3];
-            
+            // array that takes 3 values to store a single gameObjects original position
             positions[0] = enemy.transform.position.x;
+            // gameObjects x position is stored in the first index.
             positions[1] = enemy.transform.position.y;
+            // gameObjects y position is stored in the second index.
             positions[2] = enemy.transform.position.z;
+            // gameObjects z position is stored in the third index.
 
             originalPositions[i] = positions;
+            // the positions array is stored in the jagged-array at index of i
             i++;
+            // i is increments to store the next gameObject in the next index
         }
     }
     private void OnCollisionEnter(Collision other) {
@@ -40,19 +49,28 @@ public class Scorer : MonoBehaviour
             hits++;
             Debug.Log("Bumped this many times: " + hits); 
             transform.position = new Vector3(xStart, yStart, zStart);
+            
             int i = 0;
             foreach (GameObject enemy in enemies){
+                
                 float x = originalPositions[i][0];
                 float y = originalPositions[i][1];
                 float z = originalPositions[i][2];
                 i++;
                 enemy.transform.position = new Vector3(x, y, z);
+
+                if(enemy.name.StartsWith("Dropper")){
+                    enemy.GetComponent<Rigidbody>().useGravity = false;
+                }
             }
             
         } else if(other.gameObject.tag == "Winner") {
             Debug.Log("YOU WON AFTER " + hits + " TRIES!"); 
             transform.position = new Vector3(xFinish, yFinish, zFinish); 
-        }
-        
+        }  
+    }
+
+    void resetDropper() {
+
     }
 }
