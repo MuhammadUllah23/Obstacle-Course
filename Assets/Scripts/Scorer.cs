@@ -10,10 +10,14 @@ public class Scorer : MonoBehaviour
     float yStart = 1.1f;
     float zStart = -26.124f;
 
-    float xFinish = 0f;
-    float yFinish = 210f;
-    float zFinish = 0f;
+    float xFinish;
+    float yFinish;
+    float zFinish;
     private void OnCollisionEnter(Collision other) {
+        xFinish = GameObject.Find("Winner Platform").transform.position.x;
+        yFinish = GameObject.Find("Winner Platform").transform.position.y + 10;
+        zFinish = GameObject.Find("Winner Platform").transform.position.z;
+
         if(other.gameObject.tag == "Enemy") {
             hits++;
             Debug.Log("Bumped this many times: " + hits); 
