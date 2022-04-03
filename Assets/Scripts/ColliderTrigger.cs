@@ -16,10 +16,12 @@ public class ColliderTrigger : MonoBehaviour
         Rigidbody dropper;
             if(objectNum == 0) {
                 dropper = GameObject.Find("Dropper").GetComponent<Rigidbody>();
-                dropper.useGravity = false;
+                // dropper.useGravity = false;
+                dropper.constraints = RigidbodyConstraints.FreezeAll;
             } else {
                 dropper = GameObject.Find("Dropper (" + objectNum + ")").GetComponent<Rigidbody>();
-                dropper.useGravity = false;
+                dropper.constraints = RigidbodyConstraints.FreezeAll;
+                // dropper.useGravity = false;
             }
         
     }
@@ -29,10 +31,12 @@ public class ColliderTrigger : MonoBehaviour
             Rigidbody dropper;
             if(objectNum == 0) {
                 dropper =  GameObject.Find("Dropper").GetComponent<Rigidbody>();
-                dropper.useGravity = true;
+                dropper.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
+                // dropper.useGravity = true;
             } else {
                 dropper = GameObject.Find("Dropper (" + objectNum + ")").GetComponent<Rigidbody>();
-                dropper.useGravity = true;
+                dropper.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
+                // dropper.useGravity = true;
             }
             
         }
