@@ -15,10 +15,10 @@ public class ColliderTrigger : MonoBehaviour
         // Debug.Log(objectNum + "word");
         Rigidbody dropper;
             if(objectNum == 0) {
-                dropper = GameObject.Find("Dropper").GetComponent<Rigidbody>()
+                dropper = GameObject.Find("Dropper").GetComponent<Rigidbody>();
                 dropper.useGravity = false;
             } else {
-                dropper = GameObject.Find("Dropper (" + objectNum + ")").GetComponent<Rigidbody>()
+                dropper = GameObject.Find("Dropper (" + objectNum + ")").GetComponent<Rigidbody>();
                 dropper.useGravity = false;
             }
         
@@ -28,10 +28,10 @@ public class ColliderTrigger : MonoBehaviour
         if(other.tag == "Player") {
             Rigidbody dropper;
             if(objectNum == 0) {
-                dropper =  GameObject.Find("Dropper").GetComponent<Rigidbody>()
+                dropper =  GameObject.Find("Dropper").GetComponent<Rigidbody>();
                 dropper.useGravity = true;
             } else {
-                dropper = GameObject.Find("Dropper (" + objectNum + ")").GetComponent<Rigidbody>()
+                dropper = GameObject.Find("Dropper (" + objectNum + ")").GetComponent<Rigidbody>();
                 dropper.useGravity = true;
             }
             
