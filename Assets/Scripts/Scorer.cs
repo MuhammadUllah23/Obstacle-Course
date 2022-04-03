@@ -51,21 +51,7 @@ public class Scorer : MonoBehaviour
             hits++;
             Debug.Log("Bumped this many times: " + hits); 
             transform.position = new Vector3(xStart, yStart, zStart);
-            
-            
-            int i = 0;
-            foreach (GameObject enemy in enemies){
-                
-                float x = originalPositions[i][0];
-                float y = originalPositions[i][1];
-                float z = originalPositions[i][2];
-                i++;
-                enemy.transform.position = new Vector3(x, y, z);
-
-                if(enemy.name.StartsWith("Dropper")){
-                    enemy.GetComponent<Rigidbody>().useGravity = false;
-                }
-            }
+            resetEnemies();
             
         } else if(other.gameObject.tag == "Winner") {
             Debug.Log("YOU WON AFTER " + hits + " TRIES!"); 
@@ -73,5 +59,19 @@ public class Scorer : MonoBehaviour
         }  
     }
 
+    void resetEnemies() {
+        int i = 0;
+        foreach (GameObject enemy in enemies){
+            
+            float x = originalPositions[i][0];
+            float y = originalPositions[i][1];
+            float z = originalPositions[i][2];
+            i++;
+            enemy.transform.position = new Vector3(x, y, z);
 
+            if(enemy.name.StartsWith("Dropper")){
+                enemy.GetComponent<Rigidbody>().useGravity = false;
+            }
+        }
+    }
 }
