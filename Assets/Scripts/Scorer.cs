@@ -62,6 +62,12 @@ public class Scorer : MonoBehaviour
     void resetEnemies() {
         int i = 0;
         foreach (GameObject enemy in enemies){
+
+            if(enemy.name.StartsWith("Dropper")){
+                Rigidbody enemyRigid = enemy.GetComponent<Rigidbody>();
+                enemyRigid.constraints = RigidbodyConstraints.FreezeAll;
+                enemy.GetComponent<Rigidbody>().useGravity = false;
+            }
             
             float x = originalPositions[i][0];
             float y = originalPositions[i][1];
@@ -69,11 +75,6 @@ public class Scorer : MonoBehaviour
             i++;
             enemy.transform.position = new Vector3(x, y, z);
 
-            if(enemy.name.StartsWith("Dropper")){
-                Rigidbody enemyRigid = enemy.GetComponent<Rigidbody>();
-                enemyRigid.constraints = RigidbodyConstraints.FreezeAll;
-                enemy.GetComponent<Rigidbody>().useGravity = false;
-            }
         }
     }
 }
