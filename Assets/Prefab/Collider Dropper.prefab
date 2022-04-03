@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7961696116084270089}
   - component: {fileID: 7961696116084270088}
   m_Layer: 0
-  m_Name: Collider Droper
+  m_Name: Collider Dropper
   m_TagString: ColDropper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
