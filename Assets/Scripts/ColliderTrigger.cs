@@ -13,22 +13,26 @@ public class ColliderTrigger : MonoBehaviour
         objectName = gameObject.name;
         getNumber();
         // Debug.Log(objectNum + "word");
-       
+        Rigidbody dropper;
             if(objectNum == 0) {
-
-                GameObject.Find("Dropper").GetComponent<Rigidbody>().useGravity = false;
+                dropper = GameObject.Find("Dropper").GetComponent<Rigidbody>()
+                dropper.useGravity = false;
             } else {
-                GameObject.Find("Dropper (" + objectNum + ")").GetComponent<Rigidbody>().useGravity = false;
+                dropper = GameObject.Find("Dropper (" + objectNum + ")").GetComponent<Rigidbody>()
+                dropper.useGravity = false;
             }
         
     }
 
     void OnTriggerEnter (Collider other) {
         if(other.tag == "Player") {
+            Rigidbody dropper;
             if(objectNum == 0) {
-                GameObject.Find("Dropper").GetComponent<Rigidbody>().useGravity = true;
+                dropper =  GameObject.Find("Dropper").GetComponent<Rigidbody>()
+                dropper.useGravity = true;
             } else {
-                GameObject.Find("Dropper (" + objectNum + ")").GetComponent<Rigidbody>().useGravity = true;
+                dropper = GameObject.Find("Dropper (" + objectNum + ")").GetComponent<Rigidbody>()
+                dropper.useGravity = true;
             }
             
         }
