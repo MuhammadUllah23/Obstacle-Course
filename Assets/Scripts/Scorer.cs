@@ -70,6 +70,8 @@ public class Scorer : MonoBehaviour
             enemy.transform.position = new Vector3(x, y, z);
 
             if(enemy.name.StartsWith("Dropper")){
+                // Rigidbody enemyRigid = enemy.GetComponent<Rigidbody>();
+                // enemyRigid.constraints = RigidbodyConstraints.FreezeAll;
                 enemy.GetComponent<Rigidbody>().useGravity = false;
             }
         }
