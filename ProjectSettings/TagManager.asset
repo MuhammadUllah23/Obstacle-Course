@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - ColDropper
   - Winner
+  - Walls
   layers:
   - Default
   - TransparentFX
