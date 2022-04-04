@@ -18,9 +18,9 @@ public class PingPong : MonoBehaviour
     // Update is called once per frame
     void Update () {
         
-        if (this.gameObject.name.StartsWith("Pinger")) {
+        if (gameObject.name.StartsWith("Pinger")) {
             transform.position = new Vector3(Mathf.PingPong(Time.time*10,max-min)+min, transform.position.y, transform.position.z);
-        } else if(this.gameObject.name.StartsWith("Ping Pong Cube")) {
+        } else if(gameObject.name.StartsWith("Ping Pong Cube")) {
             transform.position = new Vector3(Mathf.PingPong(Time.time*5,max-min)+min, transform.position.y, transform.position.z);
         }
           
