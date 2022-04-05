@@ -26,7 +26,7 @@ public class PingPong : MonoBehaviour
     void Update () {
         
         if (gameObject.name.StartsWith("Pinger")) {
-            transform.position = new Vector3(transform.position.x, transform.position.y, Mathf.PingPong(Time.time*10,max-min)+min);
+            transform.position = new Vector3(transform.position.x, transform.position.y, Mathf.PingPong(Time.time*7,max-min)+min);
         } else if(gameObject.name.StartsWith("Ping Pong Cube")) {
             transform.position = new Vector3(Mathf.PingPong(Time.time*5,max-min)+min, transform.position.y, transform.position.z);
         }
