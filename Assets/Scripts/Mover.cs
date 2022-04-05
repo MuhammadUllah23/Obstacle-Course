@@ -5,7 +5,7 @@ using UnityEngine;
 // void Start() {} = return nothing
 public class Mover : MonoBehaviour
 {
-    float moveSpeed = 10f;
+    float moveSpeed = 12.5f;
     
     // Start is called before the first frame update
     void Start() {
