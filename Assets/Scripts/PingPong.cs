@@ -8,9 +8,16 @@ public class PingPong : MonoBehaviour
     public float max=3f;
     // Use this for initialization
     void Start () {
+
+        if (gameObject.name.StartsWith("Pinger")) {
+            min=transform.position.z;
+            max=transform.position.z+4;
+        } else if(gameObject.name.StartsWith("Ping Pong Cube")) {
+            min=transform.position.x;
+            max=transform.position.x+4;
+        }
        
-        min=transform.position.x;
-        max=transform.position.x+4;
+        
         
 //    
     }
