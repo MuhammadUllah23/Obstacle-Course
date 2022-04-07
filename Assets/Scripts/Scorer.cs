@@ -6,7 +6,7 @@ public class Scorer : MonoBehaviour
 {
     int hits = 0;
 
-    float xStart = 0f;
+    float xStart;
     float yStart = 1.1f;
     float zStart = -26.124f;
 
@@ -18,6 +18,11 @@ public class Scorer : MonoBehaviour
     // jagged-array or array of arrays
 
     void Start() {
+        
+        xStart = this.gameObject.transform.position.x;
+        yStart = this.gameObject.transform.position.y;
+        zStart = this.gameObject.transform.position.z;
+
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
         // array of all gameobjects with tag of enemy
         originalPositions = new float[enemies.Length][];
