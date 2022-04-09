@@ -48,8 +48,14 @@ public class ColliderTrigger : MonoBehaviour
         // Debug.Log(nameSplit[0][0]);
         if(nameSplit.Length == 3) {
             
-            objectNum = int.Parse(nameSplit[2][1].ToString());
+            // objectNum = int.Parse(nameSplit[2][1].ToString());
+            string dropperId = nameSplit[2].ToString();
+            if(dropperId.Length == 4) {
+                objectNum = int.Parse(nameSplit[2][1].ToString() + nameSplit[2][2].ToString());
     
+            } else {
+                objectNum = int.Parse(nameSplit[2][1].ToString());
+            }
         }
     }
-}
+    }
