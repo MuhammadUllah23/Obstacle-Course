@@ -10,7 +10,7 @@ public class ColliderTrigger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        objectName = gameObject.name;
         getNumber();
         // Debug.Log(objectNum + "word");
          dropDropper();
@@ -18,7 +18,7 @@ public class ColliderTrigger : MonoBehaviour
     }
 
     void dropDropper() {
-        objectName = gameObject.name;
+        
         Rigidbody dropper;
             if(objectNum == 0) {
                 dropper = GameObject.Find("Dropper").GetComponent<Rigidbody>();
@@ -43,7 +43,6 @@ public class ColliderTrigger : MonoBehaviour
                 dropper.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
                 // dropper.useGravity = true;
             }
-            
         }
     }
     
