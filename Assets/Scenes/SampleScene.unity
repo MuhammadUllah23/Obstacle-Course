@@ -1887,6 +1887,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collider Dropper (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 7961696116084270091, guid: cb301fda3e4b46a4fbcce2061d2d8d5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7961696116084270092, guid: cb301fda3e4b46a4fbcce2061d2d8d5f, type: 3}
       propertyPath: m_RootOrder
       value: 25
