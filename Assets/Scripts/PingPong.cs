@@ -9,6 +9,10 @@ public class PingPong : MonoBehaviour
     // Use this for initialization
     void Start () {
 
+        startMovement();
+    }
+
+    void startMovement() {
         if (gameObject.name.StartsWith("Pinger")) {
             min=transform.position.z;
             max=transform.position.z+4;
@@ -16,10 +20,6 @@ public class PingPong : MonoBehaviour
             min=transform.position.x;
             max=transform.position.x+4;
         }
-       
-        
-        
-//    
     }
    
     // Update is called once per frame
